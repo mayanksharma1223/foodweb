@@ -3,7 +3,7 @@ const app = express();
 var mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 mongoose.connect('mongodb://localhost/contact')
-const port = 80;
+const port = process.env.PORT || 8000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
